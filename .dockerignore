@@ -1,0 +1,17 @@
+
+
+.git
+.gitignore
+
+__pycache__/
+*.pyc
+
+node_modules/
+
+.env
+env.sample
+docker_env.txt
+
+logs/
+
+
