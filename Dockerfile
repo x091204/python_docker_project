@@ -23,7 +23,7 @@ COPY . .
 EXPOSE 8000 
 ## exposing django port
 
-CMD ["python","manage.py","runserver","0.0.0.0:8000"] 
+CMD ["gunicorn","-c","gunicorn-cfg.py","core.wsgi:application"] 
 ## start the application
 
 
