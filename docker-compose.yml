@@ -1,0 +1,18 @@
+
+version: "3.9"
+
+services:
+  web:
+    image: project01
+    env_file:
+      - dcoker_env.txt
+
+
+  ngnix:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes: 
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
